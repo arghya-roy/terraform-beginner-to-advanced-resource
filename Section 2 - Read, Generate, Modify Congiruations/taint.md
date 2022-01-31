@@ -15,5 +15,7 @@ resource "aws_instance" "myec2" {
 
 ### Taint Command
 ```sh
-terraform taint aws_instance.myec2
+terraform taint aws_instance.myec2  // in state file it only changes the state from running to tainted
+terraform plan  // it shows 1 to destroy 1 to create
+terraform apply
 ```
